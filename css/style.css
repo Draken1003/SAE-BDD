@@ -29,6 +29,11 @@ body{
     justify-content: center;
     height: 25%;
 }
+.container > .left > .top > form{
+    display: flex;
+    justify-content: start;
+    width: 90%;
+}
 .container > .left > .top > form > input{
     background-color: transparent;
     background-image: url(/img/deconnexion.png);
@@ -37,8 +42,6 @@ body{
     border: none;
     width: 30px;
     height: 30px;
-    margin-top: 20px;
-    margin-left: 20px;
     cursor: pointer;
 }
 .container > .left > .top > h1{
@@ -132,7 +135,7 @@ body{
     color: var(--secondary-color);
     text-align: center;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 3rem;
 }
 
 .container > .right > .evenements{
@@ -181,7 +184,15 @@ body{
 }
 
 .container > .right > .evenements > .evenement > .bottom{
-    display: none;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.5s linear;
+}
+
+.container > .right > .evenements > .evenement > .active{
+    max-height: 500px; /* une hauteur suffisante pour ton contenu */
+    opacity: 1;
 }
 
 .container > .right > .evenements > .evenement > .bottom > .description{
@@ -195,6 +206,11 @@ body{
     padding: 0 15px;
 }
 
+.container > .right > .evenements > .evenement > .bottom > form{
+    display: flex;
+    justify-content: end;
+    padding: 10px;
+}
 .container > .right > .evenements > .evenement > .bottom > form > input{
     background-color: var(--secondary-color);
     color : var(--primary-color);
@@ -202,11 +218,8 @@ body{
     font-weight: bold;
     border: none;
     padding: 8px;
-    margin: 10px;
-    margin-left: 76%;
     border-radius: 10px;
     cursor: pointer;
-    
 }
 
 

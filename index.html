@@ -83,9 +83,9 @@
                 <div class="evenement">
                     <div class="top">
                         <h2>La santé en voyage</h2>
-                        <button>caca</button>
+                        <button onclick="afficheDescription('bottom1')">caca</button>
                     </div>
-                    <div class="bottom">
+                    <div class="bottom" id="bottom1">
                         <hr>
                         <div class="description">
                             <p class="duree">15:00-16h30</p>
@@ -100,9 +100,41 @@
                 <div class="evenement">
                     <div class="top">
                         <h2>La santé en voyage</h2>
-                        <button>caca</button>
+                        <button onclick="afficheDescription('bottom2')">caca</button>
                     </div>
-                    <div class="bottom">
+                    <div class="bottom" id="bottom2">
+                        <hr>
+                        <div class="description">
+                            <p class="duree">15:00-16h30</p>
+                            <p class="salle">Salle 255 - Aile B</p>
+                        </div>
+                        <form action="" method="post">
+                            <input type="submit" value="Supprimer">
+                        </form>
+                    </div>
+                </div>
+                <div class="evenement">
+                    <div class="top">
+                        <h2>La santé en voyage</h2>
+                        <button onclick="afficheDescription('bottom3')">caca</button>
+                    </div>
+                    <div class="bottom" id="bottom3">
+                        <hr>
+                        <div class="description">
+                            <p class="duree">15:00-16h30</p>
+                            <p class="salle">Salle 255 - Aile B</p>
+                        </div>
+                        <form action="" method="post">
+                            <input type="submit" value="Supprimer">
+                        </form>
+                    </div>
+                </div>
+                <div class="evenement">
+                    <div class="top">
+                        <h2>La santé en voyage</h2>
+                        <button onclick="afficheDescription('bottom4')">caca</button>
+                    </div>
+                    <div class="bottom" id="bottom4">
                         <hr>
                         <div class="description">
                             <p class="duree">15:00-16h30</p>
@@ -114,9 +146,20 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-
 </body>
+
+<script>
+
+    function afficheDescription(id) {
+        var bottom = document.getElementById(id);
+        if (bottom.classList.contains('active')) {
+            bottom.classList.remove('active');
+            
+        } else {
+            bottom.classList.add('active');
+        }
+    }
+</script>
 </html>
