@@ -15,14 +15,14 @@ body{
 }
 
 .container > .left{
-    background-color: #6827FF;
+    background-color: var(--primary-color);
     height: 100%;
     width: 25%;
     border-radius: 25px;
 }
 .container > .left > form > input{
     background-color: transparent;
-    background-image: url(/icons8-power-30.png);
+    background-image: url(/img/deconnexion.png);
     background-position: center;
     background-size: cover;
     border: none;
@@ -36,11 +36,12 @@ body{
 .container > .left > h1{
     font-family: Arial, Helvetica, sans-serif;
     margin-top: 60px;
-    color: white;
+    color: var(--secondary-color);
     text-align: center;
     text-transform: uppercase;
 }
 .container > .left > .confs{
+    border: solid red;
     height: 70%;
     display: flex;
     flex-direction: column;
@@ -49,10 +50,21 @@ body{
     margin: 50px 15px 0 15px;
     overflow-y: scroll;
 }
+
+.confs::-webkit-scrollbar {
+    background-color: rgba(0, 0, 0, 0.22);
+    width: 10px;
+    border-radius: 10px;
+}
+.confs::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.22);
+    border-radius: 10px;
+}
+
 .container > .left > .confs > .conf{
-    background-color: white;
+    background-color: var(--secondary-color);
     font-family: Arial, Helvetica, sans-serif;
-    color : #6827FF;
+    color : var(--primary-color);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -60,18 +72,18 @@ body{
     border-radius: 20px;
 }
 .container > .left > .confs > .conf > h1{
-    background-color: white;
+    background-color: var(--secondary-color);
     text-transform: uppercase;
     text-wrap: nowrap;
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 .container > .left > .confs > .conf > p{
     font-weight: bold;
 }
 .container > .left > .confs > .conf > form > input{
-    background-color: #6827FF;
-    color : white;
+    background-color: var(--primary-color);
+    color : var(--secondary-color);
     border: none;
     padding: 3px 10px;
     border-radius: 10px;
