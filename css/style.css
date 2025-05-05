@@ -14,13 +14,22 @@ body{
     display: flex;   
 }
 
+/* ------------------------left---------------------- */
 .container > .left{
     background-color: var(--primary-color);
     height: 100%;
     width: 25%;
     border-radius: 25px;
 }
-.container > .left > form > input{
+
+.container > .left > .top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 25%;
+}
+.container > .left > .top > form > input{
     background-color: transparent;
     background-image: url(/img/deconnexion.png);
     background-position: center;
@@ -32,17 +41,17 @@ body{
     margin-left: 20px;
     cursor: pointer;
 }
-
-.container > .left > h1{
-    font-family: Arial, Helvetica, sans-serif;
+.container > .left > .top > h1{
+    font-family: var(--title-font);
+    letter-spacing: 2px;
     margin-top: 60px;
     color: var(--secondary-color);
     text-align: center;
     text-transform: uppercase;
 }
+
 .container > .left > .confs{
-    border: solid red;
-    height: 70%;
+    height: 60%;
     display: flex;
     flex-direction: column;
     gap: 23px;
@@ -63,8 +72,8 @@ body{
 
 .container > .left > .confs > .conf{
     background-color: var(--secondary-color);
-    font-family: Arial, Helvetica, sans-serif;
     color : var(--primary-color);
+    font-family: var(--text-font);
     display: flex;
     align-items: center;
     gap: 10px;
@@ -80,6 +89,7 @@ body{
 }
 .container > .left > .confs > .conf > p{
     font-weight: bold;
+    font-size: 1rem;
 }
 .container > .left > .confs > .conf > form > input{
     background-color: var(--primary-color);
@@ -90,7 +100,7 @@ body{
     font-size: 1.5rem;
     cursor: pointer;
 }
-
+/* -------------------------------------------------- */
 
 
 
@@ -99,9 +109,110 @@ body{
     width: 50%;
 }
 
+
+/* ------------------------right---------------------- */
+
 .container > .right {
     background-color: #6827FF;
     height: 100%;
     width: 25%;
     border-radius: 25px;
 }
+
+.container > .right > .top{
+    height: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container > .right > .top > h1{
+    font-family: var(--title-font);
+    letter-spacing: 2px;
+    color: var(--secondary-color);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+.container > .right > .evenements{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    padding: 0 20px;
+    margin: 50px 15px 0 15px;
+    overflow-y: scroll;
+}
+.evenements::-webkit-scrollbar {
+    background-color: rgba(0, 0, 0, 0.22);
+    width: 10px;
+    border-radius: 10px;
+}
+.evenements::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.22);
+    border-radius: 10px;
+}
+
+.container > .right > .evenements > .evenement{
+    background-color: var(--thirty-color);
+    border-radius: 20px;
+}
+
+.container > .right > .evenements > .evenement > .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.container > .right > .evenements > .evenement > .top > h2{
+    color : var(--secondary-color);
+    font-family: var(--text-font);
+    font-size: 1rem;
+}
+
+.container > .right > .evenements > .evenement > .bottom > hr{
+    background-color: var(--primary-color);
+    width: 90%;
+    margin: 0 auto;
+    height: 2px;
+    border: none;
+}
+
+.container > .right > .evenements > .evenement > .bottom{
+    display: none;
+}
+
+.container > .right > .evenements > .evenement > .bottom > .description{
+    padding: 30px;
+}
+
+.container > .right > .evenements > .evenement > .bottom > .description > p{
+    color : var(--secondary-color);
+    font-family: var(--text-font);
+    font-size: 1rem;
+    padding: 0 15px;
+}
+
+.container > .right > .evenements > .evenement > .bottom > form > input{
+    background-color: var(--secondary-color);
+    color : var(--primary-color);
+    font-family: var(--text-font);
+    font-weight: bold;
+    border: none;
+    padding: 8px;
+    margin: 10px;
+    margin-left: 76%;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+
+
+
+
+
+
+/* -------------------------------------------------- */
