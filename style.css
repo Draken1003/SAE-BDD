@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 97vh;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.container{
+    height: 100%;
+    display: flex;   
+}
+
+.container > .left{
+    background-color: #6827FF;
+    height: 100%;
+    width: 25%;
+    border-radius: 25px;
+}
+.container > .left > form > input{
+    background-color: transparent;
+    background-image: url(/icons8-power-30.png);
+    background-position: center;
+    background-size: cover;
+    border: none;
+    width: 30px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.container > .left > h1{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 60px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+.container > .left > .confs{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+    padding: 0 20px;
+    margin: 50px 15px 0 15px;
+    overflow-y: scroll;
+}
+.container > .left > .confs > .conf{
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    color : #6827FF;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px 15px;
+    border-radius: 20px;
+}
+.container > .left > .confs > .conf > h1{
+    background-color: white;
+    text-transform: uppercase;
+    text-wrap: nowrap;
+    text-align: center;
+    font-size: 2.5rem;
+}
+.container > .left > .confs > .conf > p{
+    font-weight: bold;
+}
+.container > .left > .confs > .conf > form > input{
+    background-color: #6827FF;
+    color : white;
+    border: none;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+
+
+.container > .middle{
+    height: 100%;
+    width: 50%;
+}
+
+.container > .right {
+    background-color: #6827FF;
+    height: 100%;
+    width: 25%;
+    border-radius: 25px;
+}
