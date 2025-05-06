@@ -20,19 +20,20 @@ body{
     height: 100%;
     width: 25%;
     border-radius: 25px;
+   
 }
 
 .container > .left > .top {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: 25%;
+    margin: 10px 10px 0 10px;
 }
 .container > .left > .top > form{
     display: flex;
     justify-content: start;
-    width: 90%;
+    width: 100%;
 }
 .container > .left > .top > form > input{
     background-color: transparent;
@@ -47,19 +48,19 @@ body{
 .container > .left > .top > h1{
     font-family: var(--title-font);
     letter-spacing: 2px;
-    margin-top: 60px;
     color: var(--secondary-color);
     text-align: center;
     text-transform: uppercase;
+    font-size: 2vw;
 }
 
 .container > .left > .confs{
-    height: 60%;
+    height: 70%;
     display: flex;
     flex-direction: column;
     gap: 23px;
     padding: 0 20px;
-    margin: 50px 15px 0 15px;
+    margin: 0 15px;
     overflow-y: scroll;
 }
 
@@ -84,15 +85,14 @@ body{
     border-radius: 20px;
 }
 .container > .left > .confs > .conf > h1{
-    background-color: var(--secondary-color);
     text-transform: uppercase;
     text-wrap: nowrap;
     text-align: center;
-    font-size: 2rem;
+    font-size: 2vw;
 }
 .container > .left > .confs > .conf > p{
     font-weight: bold;
-    font-size: 1rem;
+    font-size: 1vw;
 }
 .container > .left > .confs > .conf > form > input{
     background-color: var(--primary-color);
@@ -105,12 +105,49 @@ body{
 }
 /* -------------------------------------------------- */
 
-
-
+/* ------------------------middle---------------------- */
 .container > .middle{
     height: 100%;
     width: 50%;
+    padding: 0 20px;
 }
+
+.container > .middle > .top{
+    height: 20%;
+    border: solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container > .middle > .top > .year{
+    display: flex;
+    gap: 20px;
+}
+.container > .middle > .top > .year > h1{
+    font-family: var(--title-font);
+    color: var(--primary-color);
+    font-size: 3vw;
+    text-transform: uppercase;
+} 
+.container > .middle > .top > .year > button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.container > .middle > .top > .year > button > img{
+    width: 20px;
+}
+.container > .middle > .top > .year > button > .left{
+    transform: rotate(180deg);
+}
+
+.container > .middle > .bottom{
+    height: 80%;
+    border: solid green;
+}
+
+
+/* -------------------------------------------------- */
 
 
 /* ------------------------right---------------------- */
@@ -135,7 +172,7 @@ body{
     color: var(--secondary-color);
     text-align: center;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 3vw;
 }
 
 .container > .right > .evenements{
@@ -172,7 +209,21 @@ body{
 .container > .right > .evenements > .evenement > .top > h2{
     color : var(--secondary-color);
     font-family: var(--text-font);
-    font-size: 1rem;
+    font-size: 1vw;
+}
+.container > .right > .evenements > .evenement > .top > button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.container > .right > .evenements > .evenement > .top > button > img{
+    width: 20px;
+    transform: rotate(0);
+    transition: all 0.4s ease-in-out;
+}
+
+.container > .right > .evenements > .evenement > .top > button > .active-fleche{
+    transform: rotate(90deg);
 }
 
 .container > .right > .evenements > .evenement > .bottom > hr{
@@ -187,7 +238,7 @@ body{
     max-height: 0;
     opacity: 0;
     overflow: hidden;
-    transition: all 0.5s linear;
+    transition: all 0.6s linear;
 }
 
 .container > .right > .evenements > .evenement > .active{
@@ -221,11 +272,5 @@ body{
     border-radius: 10px;
     cursor: pointer;
 }
-
-
-
-
-
-
 
 /* -------------------------------------------------- */
