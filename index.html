@@ -6,8 +6,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/color-font.css">
+    
     <title>Document</title>
 </head>
+
 <body>
 
     <div class="container">
@@ -71,29 +73,53 @@
                 </div>
             </div>
         </div>
+
         <div class="middle">    
             <div class="top">
-                <div class="year">
-                    <button><img class="left" src="img/fleche2.png" alt=""></button>
-                    <h1>july 2025</h1>
-                    <button><img src="img/fleche2.png" alt=""></button>
-
+                <div class="title">
+                    <button onclick="decreaseMonth()"><img class="left" src="img/fleche2.png" alt=""></button>
+                    <h1 id="month"></h1><h1 id="year"></h1>
+                    <button onclick="increaseMonth()"><img src="img/fleche2.png" alt=""></button>
+                </div>
+                <div class="today">
+                    <button onclick="today()">Aujourd'hui</button>
                 </div>
             </div>
             <div class="bottom">
                 <div class="calendar">
                     <div class="week">
-
+                        <div class="day">
+                            <h1>Lun</h1>
+                        </div>
+                        <div class="day">
+                            <h1>Mar</h1>
+                        </div>
+                        <div class="day">
+                            <h1>Mer</h1>
+                        </div>
+                        <div class="day">
+                            <h1>Jeu</h1>
+                        </div>
+                        <div class="day">
+                            <h1>Ven</h1>
+                        </div>
+                        <div class="day">
+                            <h1>Sam</h1>
+                        </div>
+                        <div class="day">
+                            <h1>Dim</h1>
+                        </div>
                     </div>
-                    <div class="days">
-
+                    <div class="days" id="days">
+                        
                     </div>
                 </div>
                 <div class="add-event">
-
+                    <button>+</button>
                 </div>
             </div>
         </div>
+
         <div class="right">
             <div class="top">
                 <h1>jeu. 5</h1>
@@ -169,20 +195,9 @@
         </div>
     </div>
 </body>
+<script src="js/createCalendar.js"></script>
+<script src="js/afficheDescription.js"></script>
+<script src="js/daySelected.js"></script>
+<script src="js/changeMonth.js"></script>
 
-<script>
-
-    function afficheDescription(id,id2) {
-        var bottom = document.getElementById(id);
-        var fleche = document.getElementById(id2);
-        if (bottom.classList.contains('active')) {
-            bottom.classList.remove('active');
-            fleche.classList.remove('active-fleche');
-            
-        } else {
-            bottom.classList.add('active');
-            fleche.classList.add('active-fleche');
-        }
-    }
-</script>
 </html>

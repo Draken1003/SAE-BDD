@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    user-select: none;
 }
 
 body{
@@ -114,37 +115,142 @@ body{
 
 .container > .middle > .top{
     height: 20%;
-    border: solid red;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
-.container > .middle > .top > .year{
+.container > .middle > .top > .title{
     display: flex;
     gap: 20px;
 }
-.container > .middle > .top > .year > h1{
+.container > .middle > .top > .today{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container > .middle > .top > .today > button{
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    color: var(--secondary-color);
+    font-family: var(--text-font);
+    font-weight: bold;
+    font-size: 0.5vw;
+}
+
+.container > .middle > .top > .title > h1{
     font-family: var(--title-font);
     color: var(--primary-color);
     font-size: 3vw;
     text-transform: uppercase;
 } 
-.container > .middle > .top > .year > button{
+.container > .middle > .top > .title > button{
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
-.container > .middle > .top > .year > button > img{
+.container > .middle > .top > .title > button > img{
     width: 20px;
 }
-.container > .middle > .top > .year > button > .left{
+.container > .middle > .top > .title > button > .left{
     transform: rotate(180deg);
 }
 
 .container > .middle > .bottom{
-    height: 80%;
-    border: solid green;
+    height: 79%;
 }
+
+.container > .middle > .bottom > .calendar{
+    height: 95%;
+}
+
+.container > .middle > .bottom > .calendar > .week{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: solid 2px rgba(0, 0, 0, 0.085);
+}
+
+.container > .middle > .bottom > .calendar > .week > .day{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container > .middle > .bottom > .calendar > .week > .day > h1{
+    font-family: var(--text-font);
+    font-size: 1vw;
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.container > .middle > .bottom > .calendar > .days{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 85%;
+    width: 100%;
+}
+
+.container > .middle > .bottom > .calendar > .days > .row{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    width: 100%;
+}
+.container > .middle > .bottom > .calendar > .days > .row > .day{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 10px;
+    width: 2.5%;
+    height: 50%;
+    cursor: pointer;
+}
+
+.container > .middle > .bottom > .calendar > .days > .row > .selected{
+    background-color: var(--primary-color);
+}
+
+.container > .middle > .bottom > .calendar > .days > .row > .day > h1{
+    font-family: var(--text-font);
+    font-size: 1vw;
+    color: var(--text-color);
+    text-transform: uppercase;
+}
+
+.container > .middle > .bottom > .calendar > .days > .row > .day > .selected{
+    color: white;
+}
+
+.container > .middle > .bottom > .calendar > .days > .row > .marked{
+    border: solid black;
+    color: white;
+}
+
+.container > .middle > .bottom > .add-event{
+    display: flex;
+    justify-content: end;
+}
+
+.container > .middle > .bottom > .add-event > button{
+    background-color: var(--primary-color);
+    color : var(--secondary-color);
+    border: none;
+    padding: 3px 10px;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
 
 
 /* -------------------------------------------------- */
@@ -195,7 +301,7 @@ body{
 }
 
 .container > .right > .evenements > .evenement{
-    background-color: var(--thirty-color);
+    background-color: var(--tertiary-color);
     border-radius: 20px;
 }
 
