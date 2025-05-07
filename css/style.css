@@ -259,7 +259,7 @@ body{
 /* ------------------------right---------------------- */
 
 .container > .right {
-    background-color: #6827FF;
+    background-color: var(--primary-color);
     height: 100%;
     width: 25%;
     border-radius: 25px;
