@@ -64,11 +64,12 @@ function createCalendar(date) {
       }
       
       // Marquer les événements
-      if (globalEventObj[currentDayDate.toDateString()]) {
-         let mark = document.createElement("div"); // On crée une div pour marquer l'événement
-         mark.className = "day marked"; // On applique la classe "marked" à la div de l'événement
-         dayDiv.appendChild(mark); // On ajoute la div de l'événement à la div du jour
-      }
+      //------------A utiliser pour marquer les jour avec evenement ---------------
+      // if (globalEventObj[currentDayDate.toDateString()]) {
+      //    let mark = document.createElement("div"); // On crée une div pour marquer l'événement
+      //    mark.className = "day marked"; // On applique la classe "marked" à la div de l'événement
+      //    dayDiv.appendChild(mark); // On ajoute la div de l'événement à la div du jour
+      // }
 
       currentRow.appendChild(dayDiv); // On ajoute la div du jour à la ligne courante
    }
